@@ -24,7 +24,7 @@ const Login = () => {
         console.log("Response from login ", res);
         window.notify("Login success", "success");
         navigate("/");
-        window.location.reload();
+        // window.location.reload(true);
       })
       .catch((err) => {
         console.log("somthing went wrong at login user", err);
