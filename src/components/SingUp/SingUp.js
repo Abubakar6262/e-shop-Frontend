@@ -36,7 +36,7 @@ const SingUp = () => {
             })
             .catch(error => {
                 console.log('There was an error creating the user:', error?.response?.data?.message);
-                window.notify("Somthing went wrong at created user", "error")
+                window.notify( error?.message || error?.response?.data?.message, "error")
             });
 
         console.log("This submit function of sign up", userData);
