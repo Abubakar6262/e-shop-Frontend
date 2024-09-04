@@ -15,7 +15,7 @@ const ProfileSideBar = ({ active, setActive }) => {
             .then((res) => {
                 window.notify(res.data.message, "success")
                 navigate("/");
-                // window.location.reload(true);
+                window.location.reload(true);
             })
             .catch((err) => {
                 console.log("Error at loged out ", err);
@@ -81,10 +81,10 @@ const ProfileSideBar = ({ active, setActive }) => {
                 </span>
             </div>
             <div className="flex items-center cursor-pointer w-full mb-8"
-                onClick={() => setActive(8) || logoutHandler()}
+                onClick={() => setActive(8)}
             >
                 <AiOutlineLogin size={20} color={active === 8 ? "red" : ""} />
-                <span className={`pl-3 ${active === 8 ? "text-[red]" : ""} hidden 800px:block`}>
+                <span className={`pl-3 ${active === 8 ? "text-[red]" : ""} hidden 800px:block`} onClick={logoutHandler}>
                     Log Out
                 </span>
             </div>
