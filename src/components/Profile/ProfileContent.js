@@ -42,7 +42,7 @@ const ProfileContent = ({ active }) => {
                 withCredentials: true,
             })
             .then((res) => {
-                console.log("response from update image of user ", res);
+                // console.log("response from update image of user ", res);
                 window.notify(res?.data?.message, "success")
                 window.location.reload(true);
             })

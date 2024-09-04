@@ -15,7 +15,7 @@ const ProfileSideBar = ({ active, setActive }) => {
             .then((res) => {
                 window.notify(res.data.message, "success")
                 navigate("/");
-                window.location.reload(true);
+                // window.location.reload(true);
             })
             .catch((err) => {
                 console.log("Error at loged out ", err);
