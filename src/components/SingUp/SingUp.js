@@ -20,6 +20,8 @@ const SingUp = () => {
             name, email, password, avatar
         }
         axios.post(`${BASE_URL}/api/v1/users/register`, userData, {
+            withCredentials: true,
+          }, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
@@ -35,7 +37,7 @@ const SingUp = () => {
                 // navigate("/login")
             })
             .catch(error => {
-                console.log('There was an error creating the user:', error?.response?.data?.message);
+                console.log('There was an error creating the user:', error);
                 window.notify( error?.message || error?.response?.data?.message, "error")
             });
 
