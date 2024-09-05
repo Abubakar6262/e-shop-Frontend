@@ -30,9 +30,9 @@ const ProfileContent = ({ active }) => {
         const formData = new FormData();
 
         formData.append("avatar", e.target.files[0])
-        formData.forEach((value, key) => {
-            console.log(`${key}:`, value);
-        });
+        // formData.forEach((value, key) => {
+        //     console.log(`${key}:`, value);
+        // });
 
         axios.post(`${BASE_URL}/api/v1/users/update-avatar`, formData,
             {
@@ -65,7 +65,7 @@ const ProfileContent = ({ active }) => {
         // console.log("This is form data for user profile update =>", formData);
         axios.post(`${BASE_URL}/api/v1/users/update-user-profile`, formData, { withCredentials: true })
             .then((res) => {
-                console.log("response from user update profile =>", res);
+                // console.log("response from user update profile =>", res);
                 window.notify(res?.data?.message, "success")
             })
             .catch((err) => {
@@ -474,11 +474,11 @@ const Address = () => {
             const formData = {
                 country, state, city, address1, address2, zipCode, addressType
             }
-            console.log("This is address data of user ", formData);
+            // console.log("This is address data of user ", formData);
 
             axios.post(`${BASE_URL}/api/v1/users/update-address`, formData, { withCredentials: true })
                 .then((res) => {
-                    console.log("This is response from update address ", res);
+                    // console.log("This is response from update address ", res);
                     window.notify(res?.data?.message, "success")
                     setOpen(false);
                     setCountry("");

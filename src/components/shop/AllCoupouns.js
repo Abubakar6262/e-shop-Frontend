@@ -27,7 +27,7 @@ const AllCoupouns = () => {
     useEffect(async() => {
         await axios.get(`${BASE_URL}/api/v1/coupoun/get-coupoun-code/${seller._id}`, { withCredentials: true })
             .then((res) => {
-                console.log("All coupouns ", res.data.coupounCodes);
+                // console.log("All coupouns ", res.data.coupounCodes);
                 setCoupounsData(res.data.coupounCodes)
             })
             .catch((err) => {
@@ -46,7 +46,7 @@ const AllCoupouns = () => {
             shop: seller
         }, { withCredentials: true })
             .then((res) => {
-                console.log(res);
+                // console.log(res);
                 window.notify("Coupouns created successfully")
             })
             .catch((err) => {

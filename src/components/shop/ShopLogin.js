@@ -21,7 +21,7 @@ const ShopLogin = () => {
             withCredentials: true,
         })
             .then((res) => {
-                console.log("Response from shop login ", res);
+                // console.log("Response from shop login ", res);
                 window.notify("Shop Login success", "success");
                 navigate("/dashboard");
                 window.location.reload(true);

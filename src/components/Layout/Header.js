@@ -33,7 +33,7 @@ const Header = ({ activeHeading }) => {
 
     useEffect(() => {
         const favProduct = JSON.parse(localStorage.getItem("favProducts"));
-        console.log("These are fav products ", favProduct);
+        // console.log("These are fav products ", favProduct);
         setTopValue(favProduct?.length)
 
     }, [])
@@ -173,7 +173,7 @@ const Header = ({ activeHeading }) => {
                                                     size={30}
                                                     color='rgb(255 255 255 / 83% )'
                                                 />
-                                                <span className='absolute top-0 right-0 rounded-full bg-[#3bc177] w-4 h-4 top right p-0 m-0 text-white font-Poppins text-[12px] leading-tight text-center'>{topValue}</span>
+                                                <span className='absolute top-0 right-0 rounded-full bg-[#3bc177] w-4 h-4 top right p-0 m-0 text-white font-Poppins text-[12px] leading-tight text-center'>{topValue ? topValue : 0}</span>
                                             </div>
 
                                         </div>
@@ -260,7 +260,7 @@ const Header = ({ activeHeading }) => {
                                                     <div>
                                                         <div className='relative mr-[15px]'>
                                                             <AiOutlineHeart size={30} className='mt-5 ml-3' />
-                                                            <span className='absolute top-0 right-0 rounded-full bg-[#3bc177] w-4 h-4 top right p-0 m-0 text-white font-Poppins text-[12px] leading-tight text-center'>0</span>
+                                                            <span className='absolute top-0 right-0 rounded-full bg-[#3bc177] w-4 h-4 top right p-0 m-0 text-white font-Poppins text-[12px] leading-tight text-center'>{topValue ? topValue : 0}</span>
                                                         </div>
                                                     </div>
                                                     <RxCross1 size={30} className='ml-4 mt-5' onClick={() => setOpen(false)} />

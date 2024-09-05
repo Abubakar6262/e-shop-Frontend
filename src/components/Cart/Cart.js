@@ -31,7 +31,7 @@ const cartData = [
 
 const Cart = ({ setOpenCart }) => {
     const { cart } = useSelector((state) => state.cart)
-    console.log("cart data in cart js file", cart);
+    // console.log("cart data in cart js file", cart);
 
 
     return (

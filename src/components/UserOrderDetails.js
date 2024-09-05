@@ -34,7 +34,7 @@ const UserOrderDetails = () => {
             orderId: id,
         }, { withCredentials: true })
             .then((res) => {
-                console.log("This is res from create review ", res);
+                // console.log("This is res from create review ", res);
                 window.notify(res?.data?.message, "success")
                 setRating(1);
                 setComment("");

@@ -25,7 +25,7 @@ const SingUp = () => {
             }
         })
             .then(response => {
-                console.log("Response ", response.data.message);
+                // console.log("Response ", response.data.message);
                 alert(response.data.message)
                 window.notify(response?.data?.message, "info")
                 setName("");
@@ -39,7 +39,7 @@ const SingUp = () => {
                 window.notify( error?.message || error?.response?.data?.message, "error")
             });
 
-        console.log("This submit function of sign up", userData);
+        // console.log("This submit function of sign up", userData);
     }
     const handleFileInputChange = (e) => {
         const file = e.target.files[0];

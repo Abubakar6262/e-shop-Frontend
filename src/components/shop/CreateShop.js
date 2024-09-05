@@ -28,7 +28,7 @@ const CreateShop = () => {
             }
         })
             .then(response => {
-                console.log("Response ", response.data.message);
+                // console.log("Response ", response.data.message);
                 // alert(response.data.message)
                 window.notify(response?.data?.message, "info")
                 setName("");

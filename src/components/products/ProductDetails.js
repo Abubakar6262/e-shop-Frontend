@@ -12,7 +12,7 @@ const ProductDetails = ({ data }) => {
     const [click, setClick] = useState(false)
     const [select, setSelect] = useState(0)
     const navigate = useNavigate();
-    console.log(data);
+    // console.log(data);
 
     const handleDecrement = () => {
         if (count > 1) {

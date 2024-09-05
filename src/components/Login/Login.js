@@ -21,7 +21,7 @@ const Login = () => {
       withCredentials: true,
     })
       .then((res) => {
-        console.log("Response from login ", res);
+        // console.log("Response from login ", res);
         window.notify("Login success", "success");
         navigate("/");
         window.location.reload(true);

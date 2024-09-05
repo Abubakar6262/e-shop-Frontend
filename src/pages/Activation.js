@@ -14,7 +14,7 @@ const Activation = () => {
                     const res = await axios.post(`${BASE_URL}/api/v1/users/activation`, {
                         activation_token
                     });
-                    console.log(res);
+                    // console.log(res);
                     console.log(res.data.message);
                     window.notify(res.data.message, "success")
                 } catch (error) {

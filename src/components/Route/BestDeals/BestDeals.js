@@ -18,7 +18,7 @@ const BestDeals = () => {
     }, [])
 
     // console.log(data);
-    console.log("In best deal offer ", products);
+    // console.log("In best deal offer ", products);
 
     return (
         <div className={`${styles.section}`}>

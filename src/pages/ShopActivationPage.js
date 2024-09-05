@@ -14,7 +14,7 @@ const ShopActivationPage = () => {
                     const res = await axios.post(`${BASE_URL}/api/v1/shop/activation`, {
                         activation_token
                     });
-                    console.log(res);
+                    // console.log(res);
                     console.log(res.data.message);
                     window.notify(res.data.message, "success")
                 } catch (error) {

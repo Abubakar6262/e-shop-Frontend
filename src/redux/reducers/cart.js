@@ -8,7 +8,7 @@ export const cartReducer = createReducer(initialState, (builder) => {
     builder
         .addCase("addToCart", (state, action) => {
 
-            console.log("state data in reducer cart ", state.cart);
+            // console.log("state data in reducer cart ", state.cart);
 
             const item = action.payload;
             const isItemExist = state.cart.find((i) => i._id === item._id);

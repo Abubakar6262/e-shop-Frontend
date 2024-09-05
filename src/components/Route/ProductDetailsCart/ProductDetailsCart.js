@@ -31,18 +31,18 @@ const ProductDetailsCart = ({ setOpens, data }) => {
 
     const handleAddToCart = (id) => {
 
-        console.log("cart data ", cart);
+        // console.log("cart data ", cart);
     
         // Use `find` to check if the item exists in the cart
         const isItemExists = cart && cart.find((i) => i._id === id);
-        console.log("item check in product details", isItemExists);
+        // console.log("item check in product details", isItemExists);
     
         if (isItemExists) {
             window.notify("Item already is in cart", "error");
         } else {
             const cartData = { ...data, qty: count };
             dispatch(addToCart(cartData));
-            console.log("cart data ", cartData);
+            // console.log("cart data ", cartData);
     
             window.notify("Product is added to cart", "success");
         }

@@ -129,7 +129,7 @@ const Payment = () => {
       );
 
       const client_secret = data?.client_secret;
-      console.log("this is client secret key ->", client_secret);
+      // console.log("this is client secret key ->", client_secret);
 
 
       if (!stripe || !elements) return;

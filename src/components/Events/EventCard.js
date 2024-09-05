@@ -10,7 +10,7 @@ const EventCard = ({ active }) => {
     const { events } = useSelector((state) => state.events);
     const { seller } = useSelector((state) => state.seller);
 
-    console.log("seller ",seller);
+    // console.log("seller ",seller);
     
 
     const dispatch = useDispatch()
@@ -19,7 +19,7 @@ const EventCard = ({ active }) => {
         dispatch(getAllEvents());
     }, [dispatch,seller?._id]);
 
-    console.log("These events from db ", events);
+    // console.log("These events from db ", events);
 
 
     return (

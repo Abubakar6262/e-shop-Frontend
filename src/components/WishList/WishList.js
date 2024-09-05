@@ -37,7 +37,7 @@ const WishList = ({ setOpenWishList }) => {
 
     useEffect(() => {
         const favProduct = JSON.parse(localStorage.getItem("favProducts"));
-        console.log("These are fav products ", favProduct);
+        // console.log("These are fav products ", favProduct);
         setProduct(favProduct)
 
     },[])
